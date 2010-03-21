@@ -1,0 +1,21 @@
+defaults: &defaults
+  app_name: Brew
+  domain: brew.com
+  email: do-not-reply@brew.com
+  paginate: 10
+  aws:
+    access_key: YOUR_AWS_ACCESS_KEY
+    secret_key: YOUR_AWS_SECRET_KEY
+
+
+development:
+  <<: *defaults
+  server_url: http://localhost:3000
+
+test:
+  <<: *defaults
+  server_url: http://localhost:3000
+
+production:
+  <<: *defaults
+  server_url: http://www.brew.com
