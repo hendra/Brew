@@ -24,4 +24,6 @@
 class User < ActiveRecord::Base
   acts_as_authentic
   has_friendly_id :login, :use_slug => true
+
+  #attr_accessor :password, :password_confirmation
 end

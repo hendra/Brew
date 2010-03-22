@@ -16,6 +16,10 @@ test:
   <<: *defaults
   server_url: http://localhost:3000
 
+cucumber:
+  <<: *defaults
+  server_url: http://localhost:3000
+
 production:
   <<: *defaults
   server_url: http://www.brew.com

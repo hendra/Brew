@@ -25,12 +25,18 @@
 #                          /:controller/:action/:id(.:format)
 #
 ActionController::Routing::Routes.draw do |map|
-  map.resource :user_session
-  map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
+  map.root :controller => 'home' # optional, this just sets the root route
+
+  map.with_options :controller => 'user_sessions' do |m|
+    m.login '/login', :action => 'new'
+    m.logout '/logout', :action => 'destroy'
+    m.forgot_password '/forgot_password', :action => 'forgot_password'
+  end
   
+  map.dashboard '/dashboard', :controller => :dashboard
+  map.resource :user_session, :collection => {:forgot_password => :get}
   map.resource :account, :controller => "users"
   map.resources :users
-
 
   # The priority is based upon order of creation: first created -> highest priority.
 
