@@ -24,6 +24,8 @@ end
 
 group :test do
   gem 'minitest-rails'
+  gem 'minitest-rails-shoulda'
+  gem 'minitest-matchers'
   gem 'database_cleaner'
   gem 'turn'
   gem 'factory_girl'
@@ -50,3 +52,4 @@ gem 'inherited_resources'
 gem 'responders'
 gem 'has_scope'
 gem 'capistrano'
+gem 'turbolinks'
