@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: root
+
+development:
+  <<: *default
+  database: brew_development
+  password: root
+
+test:
+  <<: *default
+  database: brew_test
+  password: root
+
+production:
+  <<: *default
+  database: brew
+  password: root
