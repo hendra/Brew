@@ -1,6 +1,0 @@
-config/database.yml
-log/*.log
-tmp/**/*
-
-nbproject
-mkmf.log
