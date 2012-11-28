@@ -34,6 +34,7 @@ end
 
 group :production do
   gem 'unicorn'
+  gem 'airbrake'
 end
 
 gem 'jquery-rails'
@@ -53,3 +54,4 @@ gem 'responders'
 gem 'has_scope'
 gem 'capistrano'
 gem 'turbolinks'
+gem 'client_side_validations'
