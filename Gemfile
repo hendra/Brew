@@ -20,6 +20,7 @@ group :development do
   gem 'thin'
   gem 'pry-rails'
   gem 'debugger'
+  gem 'awesome_print'
 end
 
 group :test do
