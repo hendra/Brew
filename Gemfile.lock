@@ -33,8 +33,13 @@ GEM
       girl_friday
     ansi (1.4.3)
     arel (3.0.2)
+    awesome_print (1.1.0)
     bcrypt-ruby (3.0.1)
+    better_errors (0.2.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
     better_logging (1.0.3)
+    binding_of_caller (0.6.8)
     bootstrap-sass (2.2.1.1)
       sass (~> 3.2)
     builder (3.0.4)
@@ -141,6 +146,8 @@ GEM
       slop (~> 3.3.1)
     pry-rails (0.2.2)
       pry (>= 0.9.10)
+    quiet_assets (1.0.1)
+      railties (~> 3.1)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -232,7 +239,10 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
+  awesome_print
+  better_errors
   better_logging
+  binding_of_caller
   bootstrap-sass
   capistrano
   carrierwave
@@ -255,6 +265,7 @@ DEPENDENCIES
   minitest-rails-shoulda
   mysql2
   pry-rails
+  quiet_assets
   rails (= 3.2.9)
   rails_config
   responders
