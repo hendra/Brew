@@ -17,6 +17,7 @@ group :development do
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'meta_request', '0.2.0'
 end
 
 group :test do
@@ -53,3 +54,4 @@ gem 'has_scope'
 gem 'capistrano'
 gem 'turbolinks'
 gem 'client_side_validations'
+gem 'seedbank'
