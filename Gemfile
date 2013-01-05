@@ -33,11 +33,11 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn'
-  gem 'airbrake'
+  gem 'passenger'
 end
 
-gem 'mysql2'
+gem 'airbrake'
+gem 'pg'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'kaminari'
