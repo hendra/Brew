@@ -8,6 +8,7 @@ group :assets do
   gem 'libv8', '~> 3.11.8'
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'turbo-sprockets-rails3'
 end
 
 group :development do
@@ -53,6 +54,7 @@ gem 'inherited_resources'
 gem 'responders'
 gem 'has_scope'
 gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'turbolinks'
 gem 'client_side_validations'
 gem 'seedbank'

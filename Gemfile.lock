@@ -192,6 +192,8 @@ GEM
     rubinius-actor (0.0.2)
       rubinius-core-api
     rubinius-core-api (0.0.1)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.4)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -232,6 +234,9 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbo-sprockets-rails3 (0.3.4)
+      railties (> 3.2.8, < 4.0.0)
+      sprockets (>= 2.0.0)
     turbolinks (0.6.1)
       coffee-rails
     turn (0.9.6)
@@ -284,12 +289,14 @@ DEPENDENCIES
   rails (= 3.2.10)
   rails_config
   responders
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   seedbank
   slim-rails
   squeel
   therubyracer
   thin
+  turbo-sprockets-rails3
   turbolinks
   turn
   uglifier (>= 1.0.3)
