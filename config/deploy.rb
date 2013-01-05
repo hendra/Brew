@@ -32,10 +32,6 @@ set :deploy_via, :export
 default_run_options[:pty] = true
 ssh_options[:paranoid] = true # comment out if it gives you trouble. newest net/ssh needs this set.
 
-######## Callbacks - No More Config ########
-after "deploy:restart", "deploy:cleanup"
-after "deploy:update_code", "deploy:migrate"
-
 # Custom Tasks
 namespace :deploy do
   task :start do ; end
@@ -46,3 +42,15 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+namespace :db do
+  task :db_config, :role => :app, :except => { :no_release => true } do
+    run "cp -f #{application_dir}/shared/database/database.yml #{release_path}/config/database.yml"
+  end
+end
+
+######## Callbacks - No More Config ########
+after "deploy:restart", "deploy:cleanup"
+after "deploy:update_code", "deploy:migrate"
+after "deploy:finalize_update", "db:db_config"
+
