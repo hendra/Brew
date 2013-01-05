@@ -1,21 +1,19 @@
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   reconnect: false
   pool: 5
-  username: root
+  username: cybergarage
+  password: 123456
 
 development:
   <<: *default
   database: brew_development
-  password: root
 
 test:
   <<: *default
   database: brew_test
-  password: root
 
 production:
   <<: *default
   database: brew
-  password: root
