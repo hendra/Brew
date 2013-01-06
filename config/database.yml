@@ -1,8 +1,9 @@
 default: &default
   adapter: postgresql
-  encoding: utf8
+  template: template0
+  encoding: unicode
   reconnect: false
-  pool: 5
+  pool: 10
   username: cybergarage
   password: 123456
 

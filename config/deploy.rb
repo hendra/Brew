@@ -49,6 +49,13 @@ namespace :db do
   end
 end
 
+namespace :deploy do
+  desc "reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
+  end
+end
+
 ######## Callbacks - No More Config ########
 after "deploy:restart", "deploy:cleanup"
 after "deploy:update_code", "deploy:migrate"
