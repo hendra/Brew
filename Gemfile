@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -33,7 +33,7 @@ group :test do
 end
 
 group :production do
-  gem 'passenger'
+  gem 'passenger', '4.0.0.rc4'
 end
 
 gem 'airbrake'
